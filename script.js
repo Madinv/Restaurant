@@ -1,4 +1,3 @@
-// Путь к изображениям
 const imagePaths = [
   "/picture/restaurant-1.jpg",
   "/picture/restaurant-2.jpg",
@@ -8,49 +7,53 @@ const imagePaths = [
 
 let currentSlideshowIndex = 0;
 const imageElement = document.getElementById("slidingImage");
+const carouselImages = document.querySelectorAll(".carousel-inner img");
+let currentCarouselIndex = 0; // Переменную нужно определить здесь
 
 // Функция смены изображения в слайдере
-function changeSlideshowImage() {
-  currentSlideshowIndex = (currentSlideshowIndex + 1) % imagePaths.length;
+const changeSlideshowImage = () => {
   imageElement.src = imagePaths[currentSlideshowIndex];
-}
+  currentSlideshowIndex = (currentSlideshowIndex + 1) % imagePaths.length;
+};
 
-// Изменяем изображение каждые 2 секунды (2000 миллисекунд)
+// Устанавливаем интервал смены изображений
 setInterval(changeSlideshowImage, 2000);
 
-// Индекс текущего изображения в карусели
-let currentCarouselIndex = 0;
+// Инициализация карусели
+document.addEventListener("DOMContentLoaded", () => {
+  if (carouselImages.length > 0) {
+    carouselImages[0].classList.add("active"); // Отобразим первое изображение
+
+    document
+      .querySelector(".prev")
+      .addEventListener("click", () => changeCarouselImage(-1));
+    document
+      .querySelector(".next")
+      .addEventListener("click", () => changeCarouselImage(1));
+
+    // Показываем новое активное изображение при загрузке
+    changeCarouselImage(0);
+  }
+});
 
 // Функция смены изображения в карусели
-function changeCarouselImage(direction) {
-  const images = document.querySelectorAll(".carousel-inner img");
-
+const changeCarouselImage = (direction) => {
   // Скрываем текущее изображение
-  images[currentCarouselIndex].classList.remove("active");
+  carouselImages[currentCarouselIndex].classList.remove("active");
 
   // Обновляем текущий индекс изображения, проверяем на границы
   currentCarouselIndex =
-    (currentCarouselIndex + direction + images.length) % images.length;
+    (currentCarouselIndex + direction + carouselImages.length) %
+    carouselImages.length;
 
   // Показываем новое активное изображение
-  images[currentCarouselIndex].classList.add("active");
-}
+  carouselImages[currentCarouselIndex].classList.add("active");
+};
 
-// Инициализация карусели
-document.addEventListener("DOMContentLoaded", function () {
-  const carouselImages = document.querySelectorAll(".carousel-inner img");
-
-  // Убедимся, что есть хотя бы одно изображение
-  if (carouselImages.length > 0) {
-    carouselImages[currentCarouselIndex].classList.add("active"); // Отобразим первое изображение
-
-    // Добавляем обработчики событий на кнопки
-    document.querySelector(".prev").addEventListener("click", function () {
-      changeCarouselImage(-1);
-    });
-
-    document.querySelector(".next").addEventListener("click", function () {
-      changeCarouselImage(1);
-    });
-  }
-});
+// Обработчики событий для навигации
+document
+  .querySelector(".prev")
+  .addEventListener("click", () => changeCarouselImage(-1));
+document
+  .querySelector(".next")
+  .addEventListener("click", () => changeCarouselImage(1));

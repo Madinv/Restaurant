@@ -28,7 +28,7 @@ body {
 }
 
 .animated-button {
-  width: 100px;
+  max-width: 100px;
   height: auto;
   transition: transform 0.3s;
 }
@@ -53,6 +53,7 @@ body {
 .content h1 {
   font-size: 4.5rem;
 }
+
 .content h2 {
   font-size: 3.5rem;
 }
@@ -61,21 +62,25 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
 }
+
 button:hover {
   transform: scale(1.1);
   background-color: black;
   color: beige;
   opacity: 0.6;
 }
+
 button {
   font-size: 1.5rem;
   padding: 10px 30px;
   border-radius: 30px 0px;
   opacity: 0.8;
 }
+
 .button-call {
   padding: 10px 40px;
 }
+
 .navbar-button {
   display: flex;
   justify-content: space-around;
@@ -94,19 +99,19 @@ button {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
+
 .animated-button-three {
   position: absolute;
   top: 80%;
   right: 20%;
   font-size: 30px;
-
   animation: rotation 3s infinite linear;
 }
+
 .animated-button-four {
   position: absolute;
   top: 155%;
@@ -114,6 +119,7 @@ button {
   font-size: 30px;
   animation: rotation 2s infinite linear;
 }
+
 .animated-button-five {
   position: absolute;
   top: 110%;
@@ -121,8 +127,8 @@ button {
   font-size: 30px;
   animation: rotation 2s infinite linear;
 }
-/* 2 блок */
 
+/* 2 блок */
 .main,
 .block-room,
 .menu-block {
@@ -133,6 +139,7 @@ button {
   padding: 60px 50px;
   text-align: center;
 }
+
 .content-block {
   display: flex;
   justify-content: center;
@@ -140,6 +147,7 @@ button {
   gap: 50px;
   max-width: 500px;
 }
+
 .image-slider {
   background-size: cover;
   background-repeat: no-repeat;
@@ -156,14 +164,14 @@ button {
 .image-room img {
   border-radius: 80px 10px;
 }
+
 /* 3 блок */
 .block-room {
   background-color: black;
   color: aliceblue;
 }
 
-/* 4 блок */
-
+/* /* 4 блок */
 .carousel {
   position: relative;
   padding: 50px;
@@ -210,7 +218,6 @@ button {
 }
 
 /* 5 блок */
-
 .event-block {
   display: flex;
   align-items: center;
@@ -220,6 +227,7 @@ button {
   font-family: italic;
   font-size: 1.2rem;
 }
+
 .event-item {
   display: flex;
   flex-direction: column;
@@ -230,9 +238,9 @@ button {
 
 #event-video {
   width: 40vw;
-  /* height: 60vh; */
   border-radius: 10px 80px;
 }
+
 .block-event-button {
   display: flex;
   align-items: start;
@@ -243,7 +251,7 @@ button {
 
 /* 6 блок */
 .menu-block {
-  background-image: url(picture/1679007002_bogatyr-club-p-krasivii-fon-restoran-foni-oboi-20.jpg);
+  background-image: url(picture/restaurant-21.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -252,6 +260,7 @@ button {
   font-size: 1.5rem;
   position: relative;
 }
+
 .content-menu {
   display: flex;
   max-width: 60vw;
@@ -262,21 +271,429 @@ button {
   align-items: center;
   margin: 30px;
 }
+
 .button-menu,
 .button-history,
-.button-reserv-event {
+.button-reserv-event,
+.button-reserv-grid {
   background-color: black;
   color: white;
 }
+
 .image-menu {
   position: absolute;
   right: 0%;
   top: -20%;
   animation: rotation 3s infinite linear;
 }
+
 .image-menu-two {
   position: absolute;
   left: 0%;
   bottom: -30%;
   animation: rotation 3s infinite linear;
+}
+
+/* 7 блок */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  margin: 70px 30px;
+  height: auto;
+  max-width: 100vw;
+  border-radius: 10px 30px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item-large {
+  grid-column: span 2;
+}
+
+.grid-item:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+.grid-item:nth-child(2) {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.grid-item:nth-child(3) {
+  grid-row: 1;
+  grid-column: 4 / span 2;
+}
+
+.grid-item:nth-child(4) {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.grid-item:nth-child(5) {
+  grid-row: 2;
+  grid-column: 2 / span 2;
+}
+
+.grid-item:nth-child(6) {
+  grid-row: 2;
+  grid-column: 4 / span 2;
+}
+
+.grid-button {
+  text-align: center;
+  margin: 60px;
+}
+/* 8 блок */
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin: 20px 30px;
+}
+
+.footer-logo {
+  flex: 1;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-contact,
+.footer-nav,
+.footer-social,
+.footer-loyalty {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-contact h4,
+.footer-nav h4,
+.footer-social h4,
+.footer-loyalty h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #f4a261;
+}
+
+.footer-contact p,
+.footer-loyalty p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin-bottom: 8px;
+}
+
+.footer-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: #f4a261;
+}
+
+.footer-social a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #f4a261;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #f4a261;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .background-block {
+    padding: 40px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+  .navbar-button {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+  }
+  .content-title h1 {
+    font-size: 24px;
+  }
+
+  .content-title h2 {
+    font-size: 20px;
+  }
+
+  .content {
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .button-call {
+    padding: 10px;
+  }
+  .button-reserv,
+  .button-call,
+  .button-history {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .content-block {
+    justify-content: start;
+    gap: 30px;
+    text-align: left;
+  }
+  .main,
+  .block-room,
+  .menu-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 30px;
+    padding: 30px;
+  }
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-menu,
+  .image-menu-two {
+    display: none;
+  }
+
+  .event-block {
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .event-item {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #event-video {
+    width: 70vw;
+    border-radius: 10px 80px;
+  }
+  .block-event-button {
+    align-items: center;
+    gap: 20px;
+  }
+  .menu-block {
+    height: 80vh;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .content-menu {
+    display: flex;
+    max-width: 70vw;
+    justify-content: space-around;
+    gap: 40px;
+    flex-direction: column;
+    margin: 40px;
+  }
+
+  .carousel {
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .carousel-inner img {
+    width: 80vw;
+    height: 60vh;
+    max-width: 450px;
+    display: block;
+    margin-right: 20px;
+  }
+
+  .carousel-inner img:last-child {
+    margin-right: 0;
+  }
+  .prev,
+  .next {
+    display: none;
+  }
+
+  .grid-container {
+    padding: 20px;
+    overflow-x: auto;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin: 0 auto;
+  }
+
+  .footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+
+/* Стили для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .content-title h1 {
+    font-size: 28px;
+  }
+
+  .content-title h2 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .button-call {
+    padding: 15px;
+  }
+  .image-menu,
+  .image-menu-two {
+    display: none;
+  }
+  .main,
+  .block-room,
+  .menu-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 40px;
+    padding: 40px;
+  }
+  .event-block {
+    flex-direction: column;
+    gap: 30px;
+    margin: 50px 30px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .event-item {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  #event-video {
+    width: 80vw;
+    border-radius: 10px 80px;
+  }
+  .block-event-button {
+    align-items: center;
+    gap: 30px;
+  }
+  .menu-block {
+    height: 90vh;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .content-menu {
+    display: flex;
+    max-width: 80vw;
+    justify-content: space-around;
+    gap: 40px;
+    flex-direction: column;
+    margin: 50px;
+  }
+  .carousel {
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .carousel-inner img {
+    width: 90vw;
+    height: 70vh;
+    max-width: 500px;
+    display: block;
+    margin-right: 30px;
+  }
+
+  .carousel-inner img:last-child {
+    margin-right: 0;
+  }
+  .prev,
+  .next {
+    display: none;
+  }
 }
