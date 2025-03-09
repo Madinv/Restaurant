@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  letter-spacing: 0.2rem;
+}
+
+.background-block {
+  background-image: url("/picture/grayscale-photography-building-low-angle.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  animation: 3s linear infinite rotate;
+}
+
+.animated-button {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.animated-button:hover {
+  transform: scale(1.1);
+  background-color: white;
+  opacity: 0.8;
+}
+
+.content {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.content h1 {
+  font-size: 4.5rem;
+}
+.content h2 {
+  font-size: 3.5rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+button:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: beige;
+  opacity: 0.6;
+}
+button {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  border-radius: 30px 0px;
+  opacity: 0.8;
+}
+.button-call {
+  padding: 10px 40px;
+}
+.navbar-button {
+  display: flex;
+  justify-content: space-around;
+  gap: 150px;
+}
+
+.animated-button-two {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  font-size: 30px;
+  animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animated-button-three {
+  position: absolute;
+  top: 80%;
+  right: 20%;
+  font-size: 30px;
+
+  animation: rotation 3s infinite linear;
+}
+.animated-button-four {
+  position: absolute;
+  top: 155%;
+  left: 5%;
+  font-size: 30px;
+  animation: rotation 2s infinite linear;
+}
+.animated-button-five {
+  position: absolute;
+  top: 110%;
+  left: 45%;
+  font-size: 30px;
+  animation: rotation 2s infinite linear;
+}
+/* 2 блок */
+
+.main,
+.block-room,
+.menu-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 50px;
+  text-align: center;
+}
+.content-block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 500px;
+}
+.image-slider {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-slider img,
+.image-room img {
+  width: 400px;
+  height: 500px;
+  border-radius: 10px 80px;
+}
+
+.image-room img {
+  border-radius: 80px 10px;
+}
+/* 3 блок */
+.block-room {
+  background-color: black;
+  color: aliceblue;
+}
+
+/* 4 блок */
+
+.carousel {
+  position: relative;
+  padding: 50px;
+  background-color: black;
+}
+
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 80vh;
+  padding: 30px 50px;
+}
+
+.carousel-inner img {
+  width: 80%;
+  display: none;
+}
+
+.carousel-inner img.active {
+  display: block;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel-control:hover {
+  display: none;
+}
+
+/* 5 блок */
+
+.event-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 40px;
+  font-family: italic;
+  font-size: 1.2rem;
+}
+.event-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 10px;
+  border-radius: 10px 40px;
+}
+
+#event-video {
+  width: 40vw;
+  /* height: 60vh; */
+  border-radius: 10px 80px;
+}
+.block-event-button {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* 6 блок */
+.menu-block {
+  background-image: url(picture/1679007002_bogatyr-club-p-krasivii-fon-restoran-foni-oboi-20.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+}
+.content-menu {
+  display: flex;
+  max-width: 60vw;
+  justify-content: space-around;
+  gap: 50px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 30px;
+}
+.button-menu,
+.button-history,
+.button-reserv-event {
+  background-color: black;
+  color: white;
+}
+.image-menu {
+  position: absolute;
+  right: 0%;
+  top: -20%;
+  animation: rotation 3s infinite linear;
+}
+.image-menu-two {
+  position: absolute;
+  left: 0%;
+  bottom: -30%;
+  animation: rotation 3s infinite linear;
+}
